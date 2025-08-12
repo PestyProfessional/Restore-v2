@@ -13,9 +13,17 @@ export const router = createBrowserRouter([
         children: [
             {path: '', element:<HomePage />},
             {path: '/catalog', element: <Catalog />},
-            {path: '/catalog/:id', element:<ProductDetails />},
-            {path: '/about', element:<AboutPage />},
-            {path: '', element:<ContactPage />},
+            {path: '/catalog/:id', element: <ProductDetails />},
+            {path: '/about', element: <AboutPage />},
+            {path: '', element: <ContactPage />},
         ]
     }
-])
+], {
+    future: {
+        v7_relativeSplatPath: true, 
+        v7_fetcherPersist: true, 
+        v7_normalizeFormMethod: true, 
+        v7_partialHydration: true, 
+        v7_skipActionErrorRevalidation: true
+    }
+})
